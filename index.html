@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="./assets/img/logo/logo-adpmet.PNG" type="image/gif" sizes="16x16">
+
+    <title>ADPMET</title>
+    <!-- Bootstrap 5 CDN Start-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" 
+    crossorigin="anonymous">
+    <!-- Bootstrap 5 CDN End-->
+    <!-- Font-Awesome Start -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" 
+    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" 
+    crossorigin="anonymous">
+    <!-- FontAwesome End -->
+
+    <!-- Slick CSS Start -->
+    <link rel="stylesheet" href="./assets/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="./assets/slick-1.8.1/slick/slick-theme.css">
+    <!-- Slick CSS End -->
+
+    <!-- Custom CSS Start -->
+    <link rel="stylesheet" href="./assets/style/style.css">
+    <link rel="stylesheet" href="./assets/style/responsive.css">
+    <!-- Custom CSS End -->
+
+    <style type="text/css">
+    
+        .slider {
+            width: 90%;
+            margin: 50px auto;
+        }
+    
+        .slick-slide {
+          margin: 0px 20px;
+        }
+    
+        .slick-slide img {
+          width: 100%;
+        }
+    
+        .slick-prev:before,
+        .slick-next:before {
+          color: black;
+        }
+    
+    
+        .slick-slide {
+          transition: all ease-in-out .3s;
+          opacity: .2;
+        }
+        
+        .slick-active {
+          opacity: .9;
+        }
+    
+        .slick-current {
+          opacity: 1;
+        }
+        #pills-instagram > .css-11cewt9 {
+            visibility: hidden !important;
+        }
+    </style>
+    
+</head>
+<body class="bg-custom4">
+    
+    <div id="loader"></div>
+
+    <!-- Start Headbar -->
+    <section class="headbar">
+        <div class="container-fluid bg-custom1">
+            <div class="container">
+                <div class="d-flex justify-content-end">
+                    <span>Follow Us :</span>    
+                    <div class="social-media-icons">
+                        <div class="justify-content-between">
+                            <a href="https://www.instagram.com/adpmet_official/" target="_blank" class="p-2"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/ADPMET/" target="_blank" class="p-2"><i class="fab fa-facebook"></i></a>
+                            <a href="https://www.twitter.com/adpmet"target="_blank" class="p-2"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.youtube.com/channel/UCLiCXFZ18nHUynz8NDlPTlw/featured" target="_blank" class="p-2"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Headbar -->
+        
+    <!-- Start Navbar -->
+    <nav class="navbar navbar-expand-lg bg-custom4 navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand ms-5" href="index.html">
+                <img src="./assets/img/logo/navbar-Icon.svg" class="logo-image" alt="logo-image">
+            </a>
+            <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto flex-nowrap me-5">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Beranda</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Profile
+                          </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="struktur.html">Struktur Organisasi</a>
+                            <a class="dropdown-item" href="visimisi.html">Visi Misi</a>
+                            <a class="dropdown-item" href="sejarah.html">Sejarah</a>
+                            <a class="dropdown-item" href="programkerja.html">Program Kerja</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Repository
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="peraturan.html">Peraturan</a>
+                            <a class="dropdown-item" href="pengumuman.html">Pengumuman</a>
+                            <a class="dropdown-item" href="referensi.html">Referensi</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a id="btnMembership" class="nav-link" href="#">Membership</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Portal</a>
+                    </li>
+                    <li class="nav-item ms-3">
+                        <a id="profile_nama" class="nav-link" href="./page/login.html"><i class="fas fa-sign-in-alt"></i> Log In</a>
+                    </li>
+                    <li class="nav-item ms-3" id="profile_logout">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+    <!-- Start Hero-Image -->
+    <section class="hero-image">
+        <div class="container-fluid p-0">
+            <div class="row mx-0">
+                <div class="col-lg-8 px-0">
+                    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div id="banners"></div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+                 <div class="col-lg-4 px-0 top-topic h-100">
+                    <!-- <div id="latestNews"></div> -->
+                    <div id="topNews"></div>
+                    <div id="topNewsPremium"></div>
+                    <div id="topArticle"></div>
+                </div>
+            </div>
+    </section>
+    <!-- End Hero-Image -->
+
+    <!-- Start Service Section -->
+    <section class="services">
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col text-center">
+                            <a href="#" class="bumdpiBtn">
+                                <span class="btn hvr-float hvr-fade text-center pt-3">
+                                    <i class="fas fa-street-view"></i>
+                                    <h5>BUMD &<br> PI</h5>
+                                </span>
+                            </a>
+                            <a href="#" class="geometBtn">
+                                <span class="btn hvr-float hvr-fade text-center pt-3">
+                                    <i class="fas fa-globe-asia"></i>
+                                    <h5>Geomet <br> Portal</h5>
+                                </span>
+                            </a>
+                            <a href="#" class="dbhliftBtn">
+                                <span class="btn hvr-float hvr-fade text-center">
+                                    <i class="fas fa-wallet"></i>
+                                    <h6>DBH & <br>Lifting </h6>
+                                </span>
+                            </a>
+                            <a href="#" class="trainingBtn">
+                                <span class="btn hvr-float hvr-fade text-center">
+                                    <i class="fas fa-chalkboard-teacher"></i>
+                                    <h6>Training</h6>
+                                </span>
+                            </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Service Section -->
+
+    <!-- Start Upcoming Event Section -->
+    <section class="upcoming-event mb-2">   
+        <div class="container">
+            <div class="row" id="eventData">
+    
+            </div>
+        </div>
+    </section>
+    <!-- End Upcoming Event Section -->
+    
+    <!-- Start Ticker Section -->
+    <div class="ticker-container container-fluid bg-custom3">
+        <div class="ticker-wrap text-white">
+            <div class="ticker-move">
+                <div class="ticker-item"><i class="fas fa-exclamation text-warning"></i> Jangan lupa ikut event terbaru kami pada <span class="text-capitalize" id="eventDateTicker"></span></div>
+            </div>
+        </div>
+    </div>
+    <!-- End Ticker Section -->
+
+    <!-- Start Artikel Section -->
+    <section class="article">
+        <div class="container-fluid">
+            <div class="d-flex justify-content-between">
+            <!-- Artikel Kiri Start-->
+                <div class="text-center left-article pt-2 bg-light" id="leftArticle">
+                    
+                </div>
+            <!-- Artikel Kiri End -->
+
+            <!-- Artikel Kanan Start -->
+                <div class="right-article text-center">
+                    <ul class="list-group text-start" id="articleList">
+                        
+                    </ul>
+                </div>
+            <!-- Artikel Kanan End -->
+            </div>
+        </div>
+    </section>
+    <!-- End Artikel Section -->
+
+    <!-- Start Social Media Section -->
+    <section class="social-media">
+        <div class="container-fluid">
+            <h2 class="sec-title text-center text-white rotate-1 mt-2">Social
+                <span class="cd-words-wrapper">
+                    <b class="text-custom1 is-visible">Media</b>
+                    <b class="text-custom2">Media</b>
+                    <b class="text-custom3">Media</b>  
+                 </span>
+            </h2>
+            <div class="container">
+                <div class="text-center">
+                    <div role="group" class="btn-group-sm nav btn-group" id="pills-tab" role="tablist">
+                        <a data-toggle="tab" href="#tab-eg15-0" id="pills-instagram-tab" onclick="btnInstagram()" class="btn btn-instagram active" data-bs-toggle="pill" data-bs-target="#pills-instagram" type="button" role="tab" aria-controls="pills-instagram" aria-selected="true">Instagram</a>
+                        <a data-toggle="tab" href="#tab-eg15-1" id="pills-facebook-tab" onclick="btnFacebook()" class="btn btn-custom" data-bs-toggle="pill" data-bs-target="#pills-facebook" type="button" role="tab" aria-controls="pills-facebook" aria-selected="false">Facebook</a>
+                        <a data-toggle="tab" href="#tab-eg15-2" id="pills-twitter-tab" onclick="btnTwitter()" class="btn btn-custom" data-bs-toggle="pill" data-bs-target="#pills-twitter" type="button" role="tab" aria-controls="pills-twitter" aria-selected="false">Twitter</a>
+                    </div>
+                </div>
+                <div class="main-card mb-3 card">
+                <div class="card-body">
+                    
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade tab-eg15-0 show active" id="pills-instagram" role="tabpanel" aria-labelledby="pills-instagram-tab">
+                            <div data-mc-src="e3e51ca0-b355-4982-b6b4-2fe8b3e4f573#instagram" title="Instagram widgets for website" data-hj-allow-iframe="true" style="width: 100%; border: none; overflow: hidden; opacity: 100; transition: all 1s ease 0s; color: white !important;"></div>
+                        </div>
+                        <div class="tab-pane fade text-center" id="pills-facebook" role="tabpanel" aria-labelledby="pills-facebook-tab">
+                            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FADPMET%2F&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
+                            width="500" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                        </div>
+                        <div class="tab-pane fade" id="pills-twitter" role="tabpanel" aria-labelledby="pills-twitter-tab">
+                            <a class="twitter-timeline" href="https://twitter.com/adpmet?ref_src=twsrc%5Etfw">Tweets by adpmet</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Social Media Section -->
+
+    <div class="ticker-container container-fluid bg-custom1">
+        <div class="ticker-wrap text-white">
+            <div class="ticker-move-x">
+                <div class="d-flex justify-content-end">
+                    <span>Follow Us :</span>    
+                    <div class="social-media-icons">
+                        <div class="justify-content-between">
+                            <a href="https://www.instagram.com/adpmet_official/" target="_blank" class="p-2 text-white"><i class="fab fa-instagram"></i> @adpmet_official</a>
+                            <a href="https://www.facebook.com/ADPMET/" target="_blank" class="p-2 text-white"><i class="fab fa-facebook"></i> @adpmet</a>
+                            <a href="https://twitter.com/adpmet"target="_blank" class="p-2 text-white"><i class="fab fa-twitter"></i> @adpmet</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Start News Section -->
+    
+    <section class="news mb-2">
+        
+        <div class="container">
+            <h2 class="sec-title text-start mt-2 ">Berita Terkini</h2>
+        </div>
+        <div class="row container-fluid">
+            <div class="autoplay responsive slider"  id="newsData">  
+                
+            </div>   
+        </div>
+        <div class="container">
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+                        
+            </div>
+        <div class="row">   
+            <div class="col text-end">
+                <a href="./listberita.html" class="btn btn-custom rounded-pill">Index Berita</a>
+            </div>
+            <div class="col text-start">
+                    <a href="#" class="btn btn-custom3 rounded-pill btnPremium" type="submit">Premium</a>
+            </div>
+        </div>
+        </div>
+        
+    </section>
+    <!-- End News Section -->
+        <hr>    
+    <!-- Start Flash News Section -->
+    <div class="container">
+        <h2 class="sec-title text-center mt-2 ">Flash News</h2>
+        <div class="row" id="pinnedflashNews">
+            
+        </div>
+        <div class="row" id="flashNews">
+            
+        </div>
+
+    </div>
+    <!-- End Flash News Section -->
+
+    <div class="ticker-container container-fluid bg-custom3">
+        <div class="ticker-wrap text-white">
+            <div class="ticker-move-v" id="flashRunText">
+               
+            </div>
+        </div>
+    </div>
+
+   <!-- Start Youtube Section -->
+   <div class="container">
+        <div class="text-center mt-3">
+            <iframe class="latestVideoEmbed" vnum='0' cid="UCLiCXFZ18nHUynz8NDlPTlw" width="100%" height="500px" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+   <!-- End Youtube Section -->
+
+    <hr>
+
+    <!-- Start Sponsorship Section -->
+    <section class="sponsor">
+        <div class="col-md-12">
+            <div class="container"> 
+                <h2 class="sec-title text-center">Sponsor</h2>
+                <div class="row" id="sponsor-utama">
+                   
+                </div>
+                <hr>
+                <div class="row" id="sponsor-lain">
+                    
+                </div>
+            </div>
+            
+             
+        </div>
+    </section>
+
+    
+
+    <!-- End Sponsorship Section -->
+    <hr>
+    <!-- Start Footer Section -->
+    <footer class="footer bg-custom4 text-center text-lg-start">
+
+    <div class="container p-4">
+
+      <div class="row">
+
+        <div class="col-lg-6">
+          <img src="./assets/img/logo/navbar-Icon.svg" alt="adpmet-logo">
+        </div>
+
+        <div class="col">
+          <h5 class="text-dark">Social Media</h5>
+  
+          <ul class="list-unstyled mb-0" id="footer-sosmed">
+            
+          </ul>
+        </div>
+
+        <div class="col">
+          <h5 class="text-dark mb-0">Phone</h5>
+  
+          <ul class="list-unstyled" id="footer-contact">
+            
+          </ul>
+        </div>
+        </div>
+    </div>
+    <div id="myModal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content" style="background-color: whitesmoke;">
+            <div class="modal-header">
+              <h5 class="modal-title">Apabila Anda belum memiliki Akun Member </h5>
+              </button>
+            </div>
+            <div class="modal-body" style="background-color: white;">   
+                <p>Silahkan Hubungi</p>  
+                <div class="card-body rounded text-center" style="background-color: aliceblue;">
+                    <p><a href="mailto:adpmet@adpmet.or.id" style="color:black; text-decoration: none;">adpmet@adpmet.or.id</a></p>
+                </div>
+                <br>
+                <div class="card-body rounded text-center" style="background-color: aliceblue;">
+                    <p><i class="fa fa-mobile" style="font-size: 16px;"></i> <a href="#" style="color: black; text-decoration: none;">(021) 2995 1632</a></p>
+                    <p><i class="fa fa-phone" style="font-size: 16px;"></i> <a href="#" style="color: black; text-decoration: none;">(021) 2995 1632</a></p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <!-- <p class="text-center text-muted bottom-option">
+                    Belum memiliki akun ? <a href="../index.html">Kembali</a>
+                </p> -->
+            </div>
+          </div>
+        </div>
+      </div>
+       <!-- Copyright -->
+    <div class="text-center p-3 bg-custom1 text-white" id="footer-address">
+        
+    </div>
+    <!-- Copyright -->
+    </footer>
+    <!-- End Footer Section -->
+    <!-- Bootstrap Script Start -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    <!-- Bootstrap Script End -->
+
+    <!-- JQuery Start -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <!-- JQuery End -->
+
+    <!-- Slick Start -->
+    <!-- <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script> -->
+    <script src="./assets/slick-1.8.1/slick/slick.js"></script>
+    <!-- Slick End -->
+
+    <!-- Main Script Start -->
+    <script src="./assets/scripts/global/global.js"></script>
+    <script src="./assets/scripts/api.js"></script>
+    <script src="./assets/scripts/script.js"></script>
+    <script src="./assets/scripts/loading.js"></script>
+    <script src="./assets/scripts/main.js"></script>
+    <script src="./assets/scripts/getfooter.js"></script>
+    <!-- Main Script End -->
+
+    <script>
+        var reqURL = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent("https://www.youtube.com/feeds/videos.xml?channel_id=");
+        function loadVideo(iframe) {
+        $.getJSON(reqURL + iframe.getAttribute('cid'),
+            function(data) {
+            var videoNumber = (iframe.getAttribute('vnum') ? Number(iframe.getAttribute('vnum')) : 0);
+            var link = data.items[videoNumber].link;
+            id = link.substr(link.indexOf("=") + 1);
+            iframe.setAttribute("src", "https://youtube.com/embed/" + id + "?controls=0&autoplay=1");
+            }
+        );
+        }
+        var iframes = document.getElementsByClassName('latestVideoEmbed');
+        for (var i = 0, len = iframes.length; i < len; i++) {
+        loadVideo(iframes[i]);
+        }
+        </script>
+
+     <!-- Kirim token -->
+     <script>
+         $(document).ready(function() {
+  
+            $.ajax({
+                type: "GET",
+                url: api_url + "profile",
+                // data: formData,
+                // Fetch the stored token from localStorage and set in the header
+                headers:{"Authorization":"Bearer "+localStorage.getItem("access_token")},
+                dataType: "json",
+                encode: true,
+                success: function(data){
+                    event.preventDefault();
+                    // console.log(data);
+                $("#profile_nama").html(`
+                    <strong>${data.data.name}</strong></a>
+                
+                `);
+                console.log(data.data.name);
+                $("#profile_logout").html(`
+                    <a id="btn-logout" class="nav-link" href="#"></i>Log Out</a>
+                `);
+                }
+            });
+        });
+     </script>
+
+     <script>
+         var modal = document.getElementById("myModal");
+         $("#profile_logout").click(function (event) {
+                // console.log("btn-clicked")
+                localStorage.clear();
+                // console.log(localStorage.access_token);
+                location.replace("https://adpmet.or.id/page/login.html")
+        });
+
+        $("#btnMembership").click(function (event) {
+            // console.log("btn-clicked")
+            if(localStorage.access_token == undefined){
+                location.replace("https://adpmet.or.id/page/login.html")
+            } else {
+                location.replace("https://adpmet.or.id/membership.html")
+                // console.log("halamanlogin")
+            }
+        });
+
+        $(".btnPremium").click(function (event) {
+            // console.log("btn-clicked")
+            if(localStorage.access_token === undefined){
+                location.replace("https://adpmet.or.id/page/login.html")
+            } else {
+                location.replace("https://adpmet.or.id/listberitapremium.html")
+                // console.log("halamanlogin")
+            }
+        });
+
+
+        $(".bumdpiBtn").click(function (event) {
+            // console.log("btn-clicked")
+            if(localStorage.access_token === undefined){
+                modal.style.display = "block";
+                return
+            } else {
+                location.replace("https://adpmet.or.id/listbumdpi.html")
+                // console.log("halamanlogin")
+            }
+        });
+
+        $(".geometBtn").click(function (event) {
+            // console.log("btn-clicked")
+            if(localStorage.access_token === undefined){
+                modal.style.display = "block";
+                return
+            } else {
+                location.replace("https://adpmet.or.id/listgeomet.html")
+                // console.log("halamanlogin")
+            }
+        });
+
+        $(".dbhliftBtn").click(function (event) {
+            // console.log("btn-clicked")
+            if(localStorage.access_token === undefined){
+                modal.style.display = "block";
+                return
+            } else {
+                location.replace("https://adpmet.or.id/listdbhlifting.html")
+                // console.log("halamanlogin")
+            }
+        });
+
+        $(".trainingBtn").click(function (event) {
+            // console.log("btn-clicked")
+            if(localStorage.access_token === undefined){
+                modal.style.display = "block";
+                return
+            } else {
+                location.replace("https://adpmet.or.id/listtraining.html")
+                // console.log("halamanlogin")
+            }
+        });
+
+        window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+            }
+        }
+     </script>
+
+    <!-- Plugins Start -->
+    <!-- <script src="https://cdn2.woxo.tech/a.js#6093a9346a9ae70015dececf" async data-usrc></script> -->
+    <script src="https://cdn2.woxo.tech/a.js#61b6c8f98e9e6d00166bebe2" async data-usrc></script>
+    <!-- Plugins End -->
+    <script type="text/javascript">
+       
+        
+        (function(){
+        var i, e, d = document, s = "script";i = d.createElement("script");i.async = 1;
+        i.src = "https://cdn.curator.io/published/faa3cfaf-8e9c-4544-8b1b-5a1d096a05f7.js";
+        e = d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);
+        })();
+    </script>
+
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
+
+    <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+        apiKey: "AIzaSyDRlhqmqH7QRsuF7o_rkNcA845Phc-lXt8",
+        authDomain: "adpmet-ed36d.firebaseapp.com",
+        projectId: "adpmet-ed36d",
+        storageBucket: "adpmet-ed36d.appspot.com",
+        messagingSenderId: "632409891499",
+        appId: "1:632409891499:web:46e0fbd75937a7b7838dee",
+        measurementId: "G-JFXS8ZQDCD"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    </script>
+      
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="./assets/img/logo/logo-adpmet.PNG" type="image/gif" sizes="16x16">
+
+    <title>ADPMET</title>
+    <!-- Bootstrap 5 CDN Start-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" 
+    crossorigin="anonymous">
+    <!-- Bootstrap 5 CDN End-->
+    <!-- Font-Awesome Start -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" 
+    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" 
+    crossorigin="anonymous">
+    <!-- FontAwesome End -->
+    <!-- DataTables Start -->
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css"> -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap5.min.css">
+    <!-- DataTables End -->
+    <!-- Custom CSS Start -->
+    <link rel="stylesheet" href="./assets/style/style.css">
+    <link rel="stylesheet" href="./assets/style/responsive.css">
+    <!-- Custom CSS End -->
+</head>
+<body class="bg-custom4">
+
+    <div id="loader"></div>
+
+    <div id="header">
+        <!-- Start Headbar -->
+        <section class="headbar">
+            <div class="container-fluid bg-custom1">
+                <div class="container">
+                    <div class="d-flex justify-content-end">
+                        <span>Follow Us :</span>    
+                        <div class="social-media-icons">
+                            <div class="justify-content-between">
+                                <a href="https://www.instagram.com/adpmet_official/" target="_blank" class="p-2"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.facebook.com/ADPMET/" target="_blank" class="p-2"><i class="fab fa-facebook"></i></a>
+                                <a href="https://twitter.com/adpmet"target="_blank" class="p-2"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.youtube.com/channel/UCLiCXFZ18nHUynz8NDlPTlw/featured" class="p-2"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Headbar -->
+            
+        <!-- Start Navbar -->
+        <nav class="navbar navbar-expand-lg bg-custom4 navbar-custom">
+            <div class="container-fluid">
+                <a class="navbar-brand ms-5" href="./index.html">
+                    <img src="./assets/img/logo/navbar-Icon.svg" class="logo-image" alt="logo-image">
+                </a>
+                <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto flex-nowrap me-5">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html">Beranda</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Profile
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="struktur.html">Struktur Organisasi</a>
+                                <a class="dropdown-item" href="visimisi.html">Visi Misi</a>
+                                <a class="dropdown-item" href="sejarah.html">Sejarah</a>
+                                <a class="dropdown-item" href="programkerja.html">Program Kerja</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Repository
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="peraturan.html">Peraturan</a>
+                                <a class="dropdown-item" href="pengumuman.html">Pengumuman</a>
+                                <a class="dropdown-item" href="referensi.html">Referensi</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a id="btnMembership" class="nav-link active" href="#">Membership</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Portal</a>
+                        </li>
+                        <li class="nav-item ms-3">
+                            <a id="profile_nama" class="nav-link" href="./page/login.html"><i class="fas fa-sign-in-alt"></i> Log In</a>
+                        </li>
+                        <li class="nav-item ms-3" id="profile_logout">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    
+    </div>
+    <!-- End Navbar -->
+
+    <div class="border-bottom bg-custom1 mb-3 border-success"></div>
+
+    <!-- Start Membership  -->
+    <div class="container">
+        <h4>Selamat Datang Kembali, <span id="user_membership"></span></h4>
+        <hr>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Portal</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Area Member</li>
+            </ol>
+        </nav>
+
+        
+        <div class="bg-custom3 p-2 mb-5 text-white rounded">
+            <i class="fas fa-info-circle"></i> Info Penting : ADPMET Menjalin kerjasama dengan perusahaan teknologi
+        </div>
+
+        <button class="btn btn-custom disabled" id="serviceMember" onclick="serviceFunction()"><i class="fas fa-hands"></i> Services</button>
+        <button class="btn btn-custom" id="invoiceMember" onclick="invoiceFunction()"><i class="fas fa-hands"></i> Invoice</button>
+        <a href="./cms/cmsberita.html" id="adpmetCMS" class="btn btn-custom d-none" ><i class="fas fa-hands"></i> CMS</a>
+
+        <!-- Content Services Table Start -->
+        <div class="main-card mb-3 card" id="yourServices">
+            <div class="card-body">
+                <h5 class="card-title">Your Services</h5>
+                <ul class="nav nav-tabs">
+                    <li class="nav-item"><a data-toggle="tab" href="#tab-eg10-0" class="active nav-link">Service 1</a></li>
+                    <li class="nav-item"><a data-toggle="tab" href="#tab-eg10-1" class="nav-link">Service 2</a></li>
+                    <li class="nav-item"><a data-toggle="tab" href="#tab-eg10-2" class="nav-link">Service 3</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active p-5" id="tab-eg10-0" role="tabpanel">
+                        <table id="serviceTable" class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Layanan</th>
+                                    <th>Tagihan Berikutnya</th>
+                                    <th>Penagihan</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td id="getService">Bukan Layanan 5</td>
+                                    <td id="getTanggal" class="text-secondary">05/02/2022</td>
+                                    <td id="getPenagihan">Penagihan 3</td>
+                                    <td id="getStatus">Oke</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane" id="tab-eg10-1" role="tabpanel">Content 2</div>
+                    <div class="tab-pane" id="tab-eg10-2" role="tabpanel">Content 3</div>
+                </div>
+            </div>
+        </div>
+        <!-- Content Services Table End -->
+
+        <!-- Content Services Table Start -->
+        <div class="main-card mb-3 card hide" id="yourInvoices">
+            <div class="card-body">
+                <h5 class="card-title">Your Invoices</h5>
+                <ul class="nav nav-tabs">
+                    <li class="nav-item"><a data-toggle="tab" href="#tab-eg11-0" class="active nav-link">Service 1</a></li>
+                    <li class="nav-item"><a data-toggle="tab" href="#tab-eg11-1" class="nav-link">Service 2</a></li>
+                    <li class="nav-item"><a data-toggle="tab" href="#tab-eg11-2" class="nav-link">Service 3</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active p-5" id="tab-eg11-0" role="tabpanel">
+                        <table id="invoiceTable" class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Invoice</th>
+                                    <th>Invoice Date</th>
+                                    <th>Due Date</th>
+                                    <th>Total (Rp.)</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>20210501</td>
+                                    <td>21/12/2021</td>
+                                    <td>22/12/2021</td>
+                                    <td>125.000</td>
+                                    <td>Paid</td>
+                                    <td><i class="fas fa-eye"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>90210501</td>
+                                    <td>22/09/2021</td>
+                                    <td>23/09/2021</td>
+                                    <td>15.000</td>
+                                    <td>Unpaid</td>
+                                    <td><i class="fas fa-eye"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>10210501</td>
+                                    <td>26/11/2021</td>
+                                    <td>27/11/2021</td>
+                                    <td>925.000</td>
+                                    <td>Unpaid</td>
+                                    <td><i class="fas fa-eye"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>20210501</td>
+                                    <td>19/12/2021</td>
+                                    <td>20/12/2021</td>
+                                    <td>25.000</td>
+                                    <td>Unpaid</td>
+                                    <td><i class="fas fa-eye"></i></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane" id="tab-eg11-1" role="tabpanel">Service 2</div>
+                    <div class="tab-pane" id="tab-eg11-2" role="tabpanel">Service 3</div>
+                </div>
+            </div>
+        </div>
+        <!-- Content Services Table End -->
+
+        <!-- Docs -->
+
+        </div>
+    <!-- End Membership -->
+    </div>
+    
+    <hr>
+    <!-- Start Footer Section -->
+    <footer class="footer bg-custom4 text-center text-lg-start">
+
+        <div class="container p-4">
+    
+          <div class="row">
+    
+            <div class="col-lg-6">
+              <img src="./assets/img/logo/navbar-Icon.svg" alt="adpmet-logo">
+            </div>
+    
+            <div class="col">
+              <h5 class="text-dark">Social Media</h5>
+      
+              <ul class="list-unstyled mb-0" id="footer-sosmed">
+                
+              </ul>
+            </div>
+    
+            <div class="col">
+              <h5 class="text-dark mb-0">Phone</h5>
+      
+              <ul class="list-unstyled" id="footer-contact">
+                
+              </ul>
+            </div>
+            </div>
+        </div>
+           <!-- Copyright -->
+        <div class="text-center p-3 bg-custom1 text-white" id="footer-address">
+            
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- End Footer Section -->
+
+    <!-- Bootstrap Script Start -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    <!-- Bootstrap Script End -->
+
+    <!-- JQuery Start -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+
+    <!-- Main Script Start -->
+    <script src="./assets/scripts/global/global.js"></script>
+    <script src="./assets/scripts/loading.js"></script>
+    <script src="./assets/scripts/script.js"></script>
+    <script src="./assets/scripts/membership.js"></script>
+    <script src="./assets/scripts/main.js"></script>
+    <script src="./assets/scripts/getfooter.js"></script>
+    <!-- Main Script End -->
+    <script>
+        $("#profile_logout").click(function (event) {
+            localStorage.clear();
+            location.replace("https://adpmet.or.id/page/login.html")
+        });
+    </script>
+
+    <!-- Plugins Start -->
+    <script src="https://cdn2.woxo.tech/a.js#6093a9346a9ae70015dececf" async data-usrc></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdn.datatables.net/plug-ins/1.10.11/sorting/date-eu.js"></script>
+    <script src="./assets/scripts/datatable.js"></script>
+    <!-- Plugins End -->
+</body>
+</html>

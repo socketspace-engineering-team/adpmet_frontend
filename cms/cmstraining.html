@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>CMS - ADPMET</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="./assets/styles/styles.css" rel="stylesheet" />
+        <link href="./assets/styles/custom.css" rel="stylesheet" />
+        <!-- Font-Awesome Start -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" 
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" 
+        crossorigin="anonymous">
+        <!-- FontAwesome End -->
+        <link rel="stylesheet" href="./fine-uploader/fine-uploader-new.css">
+        <script src="./fine-uploader/fine-uploader.js"></script>
+        <script type="text/template" id="qq-template-manual-trigger">
+          <div class="qq-uploader-selector qq-uploader" qq-drop-area-text="Drop files here">
+              <div class="qq-total-progress-bar-container-selector qq-total-progress-bar-container">
+                  <div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" class="qq-total-progress-bar-selector qq-progress-bar qq-total-progress-bar"></div>
+              </div>
+              <div class="qq-upload-drop-area-selector qq-upload-drop-area" qq-hide-dropzone>
+                  <span class="qq-upload-drop-area-text-selector"></span>
+              </div>
+              <div class="buttons">
+                  <div class="qq-upload-button-selector qq-upload-button">
+                      <div>Select files</div>
+                  </div>
+                  <!-- <button type="button" id="trigger-upload" class="btn btn-primary">
+                      <i class="icon-upload icon-white"></i> Upload
+                  </button> -->
+              </div>
+              <span class="qq-drop-processing-selector qq-drop-processing">
+                  <span>Processing dropped files...</span>
+                  <span class="qq-drop-processing-spinner-selector qq-drop-processing-spinner"></span>
+              </span>
+              <ul class="qq-upload-list-selector qq-upload-list" aria-live="polite" aria-relevant="additions removals">
+                  <li>
+                      <div class="qq-progress-bar-container-selector">
+                          <div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" class="qq-progress-bar-selector qq-progress-bar"></div>
+                      </div>
+                      <span class="qq-upload-spinner-selector qq-upload-spinner"></span>
+                      <img class="qq-thumbnail-selector" qq-max-size="100" qq-server-scale>
+                      <span class="qq-upload-file-selector qq-upload-file"></span>
+                      <span class="qq-edit-filename-icon-selector qq-edit-filename-icon" aria-label="Edit filename"></span>
+                      <input class="qq-edit-filename-selector qq-edit-filename" tabindex="0" type="text">
+                      <span class="qq-upload-size-selector qq-upload-size"></span>
+                      <button type="button" class="qq-btn qq-upload-cancel-selector qq-upload-cancel">Cancel</button>
+                      <button type="button" class="qq-btn qq-upload-retry-selector qq-upload-retry">Retry</button>
+                      <button type="button" class="qq-btn qq-upload-delete-selector qq-upload-delete">Delete</button>
+                      <span role="status" class="qq-upload-status-text-selector qq-upload-status-text"></span>
+                  </li>
+              </ul>
+  
+              <dialog class="qq-alert-dialog-selector">
+                  <div class="qq-dialog-message-selector"></div>
+                  <div class="qq-dialog-buttons">
+                      <button type="button" class="qq-cancel-button-selector">Close</button>
+                  </div>
+              </dialog>
+  
+              <dialog class="qq-confirm-dialog-selector">
+                  <div class="qq-dialog-message-selector"></div>
+                  <div class="qq-dialog-buttons">
+                      <button type="button" class="qq-cancel-button-selector">No</button>
+                      <button type="button" class="qq-ok-button-selector">Yes</button>
+                  </div>
+              </dialog>
+  
+              <dialog class="qq-prompt-dialog-selector">
+                  <div class="qq-dialog-message-selector"></div>
+                  <input type="text">
+                  <div class="qq-dialog-buttons">
+                      <button type="button" class="qq-cancel-button-selector">Cancel</button>
+                      <button type="button" class="qq-ok-button-selector">Ok</button>
+                  </div>
+              </dialog>
+          </div>
+        </script>
+        
+    </head>
+    <body>
+        <div class="d-flex" id="wrapper">
+            <!-- Sidebar-->
+            <div class="border-end bg-white" id="sidebar-wrapper"></div>
+            <!-- Page content wrapper-->
+            <div id="page-content-wrapper">
+                <!-- Top navigation-->
+                <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                    <div class="container-fluid">
+                        <i id="sidebarToggle" class="fas fa-bars btn text-secondary"></i>
+                        <button class="btn btn-primary" id="logoutCms"><i class="fas fa-sign-out-alt"></i> Logout</button>
+                    </div>
+                </nav>
+                <!-- Page content-->
+                <div class="container-fluid">
+                    
+                    <div class="container mt-5">
+                        <h1 class="my-2">Upload Training</h1>
+                        <div class="mr-auto ml-auto border p-4">
+                        <form class="form-group" method="post" enctype="multipart/form-data">
+                            <div class="mb-3">
+                                <div class="row g-3 mt-2">
+                                    <div class="col-md-12">
+                                        <label class="form-label">Judul Training</label>
+                                        <input type="text" class="form-control" id="inputJudul" required>
+                                    </div>
+                                    
+                                    <div class="col-md-4">
+                                        <label class="form-label">Sumber Foto</label>
+                                        <input type="text" class="form-control" id="inputSumberFoto" required>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label">Author</label>
+                                        <input type="text" class="form-control" id="inputAuthor" required>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label">Tanggal</label>
+                                        <input type="datetime-local" class="form-control" id="inputTanggal" required>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label class="form-label">Description</label>
+                                        <div class="cont">
+                                          <div id="editor" contenteditable="false">
+                                            <section id="toolbar">
+                                              <div id="bold" class="icon fa fa-bold"></div>
+                                              <div id="italic" class="icon fa fa-italic"></div>
+                                              <div id="createLink" class="icon fa fa-link"></div>
+                                              <div id="insertUnorderedList" class="icon fa fa-list"></div>
+                                              <div id="insertOrderedList" class="icon fa fa-list-ol"></div>
+                                              <div id="justifyLeft" class="icon fa fa-align-left"></div>
+                                              <div id="justifyRight" class="icon fa fa-align-right"></div>
+                                              <div id="justifyCenter" class="icon fa fa-align-center"></div>
+                                              <div id="justifyFull" class="icon fa fa-align-justify"></div>
+                                            </section>
+                                        
+                                            <div id="page" contenteditable="true">
+                                              <p id="page-content"></p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="col-md-12">
+                                        <label class="form-label">Provinsi</label>
+                                        <select class="custom-select form-control" id="inputProvinsi">
+                                            <option selected>Pilih Salah Satu</option>
+                                        </select>
+                                    </div> -->
+                                    <div class="col-md-12">
+                                        <label class="form-label">Upload Gambar</label>
+                                        <div id="fine-uploader-manual-trigger"></div>  
+                                    </div>
+                                    <a type="button" id="trigger-upload"  name="upload" value="upload" class="btn btn-block btn-dark"><i class="fa fa-fw fa-upload"></i> Upload</a>
+                            </div>
+                        </form>
+                      </div>
+                    </div>
+                    <h1 class="mt-4">Edit/Delete Training Data</h1>
+                    <div class="container mt-5">
+                      <table class="table table-image">
+                        <thead>
+                          <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Gambar</th>
+                            <th scope="col">Judul Training</th>
+                            <th scope="col">Tanggal</th>
+                            <th scope="col">Author</th>
+                            <th scope="col">Action</th>
+                          </tr>
+                        </thead>
+                        <tbody id="trainingList">
+                          
+                        </tbody>
+                      </table>
+                    </div>
+                </div>
+        </div>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+        
+        <!-- JQuery Start -->
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+        <!-- JQuery End -->
+        <script src="../assets/scripts/global/global.js"></script>
+        <script src="./assets/js/access.js"></script>
+        <script src="../assets/scripts/global/MockData/mockProvince.js"></script>
+        <script src="./assets/js/training.js"></script>
+        
+        <!-- Core theme JS-->
+        <script src="./assets/js/scripts.js"></script>
+        <script src="../assets/scripts/api.js"></script>
+        <script src="./assets/js/sidebar.js"></script>
+        
+    </body>
+</html>

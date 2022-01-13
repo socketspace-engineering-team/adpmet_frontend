@@ -1,0 +1,85 @@
+@media(max-width:1206px){
+    .tab-eg15-0 iframe {
+        height: 330px;
+  }
+}
+
+@media(max-width: 991px){
+    .footer .col{
+        margin-top: 10px;
+    }
+
+    .tab-eg15-0 iframe {
+        height: 270px;
+    }
+}
+@media(max-width: 767px) {
+    .services i {
+        position: static;
+    }
+
+    .right-article ul li, .right-article .row{
+        font-size: 9px;
+    }
+    .tab-eg15-0 iframe {
+        height: 230px;
+    }
+}
+
+@media(max-width: 574px){
+    img.logo-image{
+        display: block;
+        width: 80%;
+    }
+    .navbar-brand{
+        margin-left: -.25rem !important;
+    }
+    .left-article p {
+        display: none;;
+    }
+    .left-article {
+        width: 60%;
+    }
+    .right-article .row, .right-article .article-desc{
+        display: none;
+    }
+    .right-article .article-link{
+        display: inline;
+    }
+    .right-article .sub-article{
+        height: 70px;
+        overflow: hidden;
+    }
+    .tab-eg15-0 iframe {
+        height: 190px;
+    }
+    
+}
+
+@media(max-width: 375px){
+    .tab-eg15-0 iframe {
+        height: 170px;
+    }
+    .artikelAuthor{
+        max-height: 28px;
+        overflow: hidden;
+    }
+
+    .artikelJudul h4{
+        font-size: 18px;
+    }
+}
+
+@media(max-width: 320px){
+    .tab-eg15-0 iframe {
+        height: 150px;
+    }
+    
+    img.logo-image{
+        display: block;
+        width: 50%;
+    }
+    .navbar-brand{
+        margin-left: -.25rem !important;
+    }
+}

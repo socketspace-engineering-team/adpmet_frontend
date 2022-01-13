@@ -1,0 +1,20 @@
+tambah label terbaru dibawah HEADING
+
+tambah filter LABEL NASIONAL
+
+Prioritas :
+Yang banyak dicari (yang diliat)
+Yang terbaru
+
+DIBAWAH NAV PAGINATION
+
+"INTERACTIVE DATA ANALYSIS" -> Under Cons
+
+KASIH UNDER CONS
+
+KASIH HANDLE BUAT PREMIUM PAGES & INFO
+
+PERBESAR WIDTH & HEIGHT CONTAINER
+
+DBH -> PENGUMUMAN PROVINSI
+GeoMeet -> PENGUMUMAN MAPS

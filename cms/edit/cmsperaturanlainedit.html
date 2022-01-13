@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>CMS - ADPMET</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="../assets/styles/styles.css" rel="stylesheet" />
+        <link href="../assets/styles/custom.css" rel="stylesheet" />
+        <link rel="stylesheet" href="../fine-uploader/fine-uploader-new.css">
+        <!-- Font-Awesome Start -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" 
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" 
+        crossorigin="anonymous">
+        <!-- FontAwesome End -->
+        <script src="../fine-uploader/fine-uploader.js"></script>
+        <script type="text/template" id="qq-template-manual-trigger">
+          <div class="qq-uploader-selector qq-uploader" qq-drop-area-text="Drop files here">
+              <div class="qq-total-progress-bar-container-selector qq-total-progress-bar-container">
+                  <div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" class="qq-total-progress-bar-selector qq-progress-bar qq-total-progress-bar"></div>
+              </div>
+              <div class="qq-upload-drop-area-selector qq-upload-drop-area" qq-hide-dropzone>
+                  <span class="qq-upload-drop-area-text-selector"></span>
+              </div>
+              <div class="buttons">
+                  <div class="qq-upload-button-selector qq-upload-button">
+                      <div>Select files</div>
+                  </div>
+              </div>
+              <span class="qq-drop-processing-selector qq-drop-processing">
+                  <span>Processing dropped files...</span>
+                  <span class="qq-drop-processing-spinner-selector qq-drop-processing-spinner"></span>
+              </span>
+              <ul class="qq-upload-list-selector qq-upload-list" aria-live="polite" aria-relevant="additions removals">
+                  <li>
+                      <div class="qq-progress-bar-container-selector">
+                          <div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" class="qq-progress-bar-selector qq-progress-bar"></div>
+                      </div>
+                      <span class="qq-upload-spinner-selector qq-upload-spinner"></span>
+                      <img class="qq-thumbnail-selector" qq-max-size="100" qq-server-scale>
+                      <span class="qq-upload-file-selector qq-upload-file"></span>
+                      <span class="qq-edit-filename-icon-selector qq-edit-filename-icon" aria-label="Edit filename"></span>
+                      <input class="qq-edit-filename-selector qq-edit-filename" tabindex="0" type="text">
+                      <span class="qq-upload-size-selector qq-upload-size"></span>
+                      <button type="button" class="qq-btn qq-upload-cancel-selector qq-upload-cancel">Cancel</button>
+                      <button type="button" class="qq-btn qq-upload-retry-selector qq-upload-retry">Retry</button>
+                      <button type="button" class="qq-btn qq-upload-delete-selector qq-upload-delete">Delete</button>
+                      <span role="status" class="qq-upload-status-text-selector qq-upload-status-text"></span>
+                  </li>
+              </ul>
+  
+              <dialog class="qq-alert-dialog-selector">
+                  <div class="qq-dialog-message-selector"></div>
+                  <div class="qq-dialog-buttons">
+                      <button type="button" class="qq-cancel-button-selector">Close</button>
+                  </div>
+              </dialog>
+  
+              <dialog class="qq-confirm-dialog-selector">
+                  <div class="qq-dialog-message-selector"></div>
+                  <div class="qq-dialog-buttons">
+                      <button type="button" class="qq-cancel-button-selector">No</button>
+                      <button type="button" class="qq-ok-button-selector">Yes</button>
+                  </div>
+              </dialog>
+  
+              <dialog class="qq-prompt-dialog-selector">
+                  <div class="qq-dialog-message-selector"></div>
+                  <input type="text">
+                  <div class="qq-dialog-buttons">
+                      <button type="button" class="qq-cancel-button-selector">Cancel</button>
+                      <button type="button" class="qq-ok-button-selector">Ok</button>
+                  </div>
+              </dialog>
+          </div>
+        </script>
+        
+    </head>
+    <body>
+        <div class="d-flex" id="wrapper">
+            <!-- Sidebar-->
+            <div class="border-end bg-white" id="sidebar-wrapper"></div>
+            <!-- Page content wrapper-->
+            <div id="page-content-wrapper">
+                <!-- Top navigation-->
+                <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                    <div class="container-fluid">
+                        <i id="sidebarToggle" class="fas fa-bars btn text-secondary"></i>
+                        <button class="btn btn-primary" id="logoutCms"><i class="fas fa-sign-out-alt"></i> Logout</button>
+                    </div>
+                </nav>
+                <!-- Page content-->
+                <div class="container-fluid">
+                    <h1 class="mt-4">Edit Peraturan Lainnya</h1>
+                    <div class="container mt-5">
+                        <div class="mr-auto ml-auto border p-4">
+                        <form class="form-group" method="post" enctype="multipart/form-data">
+                            <div class="mb-3">
+                                <div class="row g-3 mt-2">
+                                    <div class="col-md-4" id="idPeraturanLain">
+                                       
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label">Upload File PDF peraturan</label>
+                                        <div id="fine-uploader-manual-trigger"></div>  
+                                        
+                                        </div>
+                                    <div class="col-md-4" id="namaPeraturanLain">
+                                       
+                                    </div>
+                                    <div class="col-md-4" id="tentangPeraturanLain">
+                                        
+                                    </div>
+                                    <div class="col-md-4" id="jenisPeraturanLain">
+                                        <label class="form-label">Jenis Peraturan</label>
+                                        <select class="custom-select form-control" id="inputJenis">
+                                            <option selected>Pilih Salah Satu</option>
+                                            <option value="0">INPRES</option>
+                                            <option value="1">KEPMEN</option>
+                                            <option value="2">KEPRES</option>
+                                            <option value="3">PERDA RUED DAERAH</option>
+                                            <option value="4">PERMEN</option>
+                                            <option value="5">PERPRES</option>
+                                            <option value="6">PP</option>
+                                            <option value="7">UNDANG-UNDANG</option>
+                                        </select>
+                                    </div>
+                                    <a href="#" type="button" id="trigger-upload"  name="upload" value="upload" class="btn btn-block btn-dark"><i class="fa fa-fw fa-upload"></i> Upload</a>
+                                </div>
+                        </form>
+                      </div>
+                    </div>
+                    <h1 class="mt-4">Data Peraturan</h1>
+                    <div class="container mt-5">
+                      <table class="table table-image">
+                        <thead>
+                          <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Nama Peraturan</th>
+                            <th scope="col">Tentang</th>
+                            <th scope="col">Jenis Peraturan</th>
+                            <th scope="col">Tanggal Upload</th>
+                            <th scope="col">Action</th>
+                          </tr>
+                        </thead>
+                        <tbody id="lainnyaDataList">
+                          
+                        </tbody>
+                      </table>
+                    </div>
+                </div>
+        </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+        
+        <!-- JQuery Start -->
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+        
+        <!-- JQuery End -->
+        <script src="../../assets/scripts/global/global.js"></script>
+        <script src="./js/editperaturanlain.js"></script>
+        
+        <!-- Core theme JS-->
+        <script src="../assets/js/access.js"></script>
+        <script src="../assets/js/scripts.js"></script>
+        <script src="../../assets/scripts/api.js"></script>
+        <script src="./js/sidebaredit.js"></script>
+
+        <script>
+            $.ajax({
+              "type":"GET",
+              "url": api_url + "peraturanlain",
+              "dataType":"json",
+              encode:true,
+              success:function(data){
+                console.log(data);
+                var url = new URL(window.location.href);
+                var index = url.searchParams.get("index");
+                const rows=data.data;
+                $("#idPeraturanLain").append(`
+                    <label class="form-label">Id Peraturan</label>
+                    <input type="text" class="form-control" id="inputId" value="${rows[index].id}" disabled>
+                `)
+                $("#namaPeraturanLain").append(`
+                    <label class="form-label">Nama Peraturan</label>
+                    <input type="text" class="form-control" id="inputNama" value="${rows[index].nama_peraturan}">
+                `)
+                $("#tentangPeraturanLain").append(`
+                    <label class="form-label">Tentang</label>
+                    <input class="form-control" id="inputTentang" rows="2" value="${rows[index].tentang}"></input>
+                `)
+                for(i = 0; i < rows.length; i++){
+                    var dateTime = rows[i].registry_datte;
+                    var newDate = new Date(dateTime);
+                    var url = new URL(window.location.href);
+                if  (rows[i].jenis_peraturan == 0 ){
+                    rows[i].jenis_peraturan = "INPRES"
+                } else if (rows[i].jenis_peraturan == 1) {
+                    rows[i].jenis_peraturan = "KEPMEN"
+                } else if (rows[i].jenis_peraturan == 2) {
+                    rows[i].jenis_peraturan = "KEPRES"
+                } else if (rows[i].jenis_peraturan == 3) {
+                    rows[i].jenis_peraturan = "PERDA RUED DAERAH"
+                } else if (rows[i].jenis_peraturan == 4) {
+                    rows[i].jenis_peraturan = "PERMEN"
+                } else if (rows[i].jenis_peraturan == 5) {
+                    rows[i].jenis_peraturan = "PERPRES"
+                } else if (rows[i].jenis_peraturan == 6) {
+                    rows[i].jenis_peraturan = "PP"
+                } else if (rows[i].jenis_peraturan == 7) {
+                    rows[i].jenis_peraturan = "UNDANG-UNDANG"
+                }
+                  $("#lainnyaDataList").append(`
+                  <tr>
+                  <th scope="row">${rows[i].id}</th>
+                  <td>${rows[i].nama_peraturan}</td>
+                  <td>${rows[i].tentang}</td>
+                  <td>${rows[i].jenis_peraturan}</td>
+                  <td>${newDate.getDate()+"-"+newDate.getMonth()+"-"+newDate.getFullYear()}</td>
+                  <td class="text-center"><a href="#"><i id="deleteperaturanlain${rows[i].id}" data-id="${rows[i].id}"  class="far fa-trash-alt"></i></a>
+                        <a href="${`https://`+url.hostname+`/cms/edit/cmsperaturanlainedit.html?index=${i}`}"><i class="far fa-edit"></i></a>
+                    </td>
+                </tr>
+                        `)
+                        $(`#deleteperaturanlain${rows[i].id}`).click(function (event) {
+                        console.log("CLICKED!")
+                        var peraturanlainId = $(this).data('id');
+                        console.log(peraturanlainId )
+                        var formData = {
+                            id : peraturanlainId 
+                        };
+                        console.log(formData)
+                        $.ajax({
+                            type: "DELETE",
+                            url: api_url + 'peraturanlain',
+                            data: formData,
+                            headers:{"Authorization":"Bearer "},
+                            dataType: "json",
+                            encode: true,
+                            success: function(data){
+                                alert("Data Berhasil Dihapus");
+                                window.location.reload();
+                                event.preventDefault();
+                            console.log(data);
+                            console.log(formData)
+                            }
+                        })
+                        })
+                }
+              }
+            })
+          </script>
+        
+    </body>
+</html>

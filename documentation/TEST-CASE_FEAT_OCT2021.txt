@@ -1,0 +1,145 @@
+NOTES 24/11/2021
+
+--------------------- TEST CASE ------------------------------
+
+--------- CMS ------
+
+DBH LIFTING {
+-----------------------------------------
+CREATE = OKAY,
+EDIT = OKAY,
+DELETE = OKAY,
+GET {
+	GET on CREATE = OKAY,
+	GET on EDIT = OKAY,
+	GET on SPECIFIC INDEX = OKAY
+}
+REDIRECT = {
+	CREATE to EDIT = OKAY,
+	EDIT to EDIT = OKAY
+}
+},
+
+GeoMET {
+--------------------------------------------
+CREATE = OKAY,
+EDIT = OKAY,
+DELETE = OKAY,
+GET {
+	GET on CREATE = OKAY,
+	GET on EDIT = OKAY,
+	GET on SPECIFIC INDEX = OKAY
+}
+REDIRECT {
+	CREATE to EDIT = OKAY
+	EDIT to EDIT = OKAY
+}
+},
+
+BUMD & PI {
+------------------------------------------
+CREATE = OKAY
+EDIT = OKAY,
+DELETE = OKAY
+GET {
+	GET on CREATE = OKAY,
+	GET on EDIT = OKAY,
+	GET on SPECIFIC INDEX = OKAY,
+}
+REDIRECT {
+	CREATE to EDIT = OKAY,
+	EDIT to EDIT = OKAY
+},
+},
+
+TRAINING {
+-------------------------------------------
+CREATE = OKAY
+EDIT = OKAY
+DELETE = OKAY
+GET {
+	GET on CREATE = OKAY,
+	GET on EDIT = OKAY,
+	GET on SPECIFIC INDEX = OKAY
+}
+REDIRECT {
+	CREATE to EDIT = OKAY,
+	EDIT to EDIT = OKAY
+}
+}
+
+-------- CMS ------
+
+----------------------- LANDING PAGES ------------------------
+DBH & LIFTING
+------------------
+
+GET LIST = Okay,
+Search Feat = Okay,
+MOCK PROVINCE = Okay,
+Filter by Province Feat = Okay,
+Pagination Feat = Okay ,
+Redirect to Detail = Okay,
+Protected Route Feat = Okay
+
+DETAIL PAGES {
+	Get Detail = Okay,
+	Indexing = Okay,
+	Breadcumb Redirect Feat = Okay,
+	Indexing Redirect = OKAY
+}
+
+BUMD & PI
+------------------
+
+GET LIST = OKAY,
+Search Feat = OKAY,
+MOCK PROVINCE = OKAY,
+Filter by Province Feat = OKAY,
+Pagination Feat = OKAY,
+Redirect to Detail = OKAY,
+Protected Route Feat = OKAY
+
+DETAIL PAGES {
+	Get Detail = OKAY,
+	Indexing = OKAY,
+	Breadcumb Redirect Feat = OKAY,
+	Indexing Redirect = OKAY
+},
+
+GeoMET
+------------------
+
+GET LIST = OKAY,
+Search Feat = OKAY,
+MOCK PROVINCE = OKAY,
+Filter by Province Feat = OKAY,
+Pagination Feat = OKAY,
+Redirect to Detail = OKAY ,
+Protected Route Feat = OKAY
+
+DETAIL PAGES {
+	Get Detail = OKAY,
+	Indexing = OKAY,
+	Breadcumb Redirect Feat = OKAY,
+	indexing Redirect = OKAY
+},
+
+Training
+------------------
+
+GET LIST = OKAY,
+Search Feat = OKAY,
+MOCK PROVINCE = OKAY,
+Filter by Province Feat = OKAY,
+Pagination Feat = OKAY,
+Redirect to Detail = OKAY,
+Non-Protected Route Feat = ISSUE WITH CACHE IN NODE SERVER 
+
+DETAIL PAGES {
+	Get Detail = OKAY,
+	Indexing = OKAY,
+	Breadcumb Redirect Feat = OKAY,
+	Indexing Redirect = OKAY
+}
+

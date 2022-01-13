@@ -1,0 +1,59 @@
+--- AUTH LOGIN ----
+Super Admin = OKAY (1)
+Admin_bumdpi = OKAY (2)
+Admin_geomet = OKAY (3)
+Admin_dbh_lifting = OKAY (4)
+Admin_training = OKAY (5)
+Admin_berita + FLASH NEWS = OKAY (6)
+User Biasa = OKAY (0)
+
+----------- MEMBERSHIP PAGE AUTH ------------
+
+Synch CMS BUTTON = (OKAY)
+
+-------- CMS -----------
+
+DOM Sidebar = OKAY (ROUGH DOM)
+
+-------- CMS REDIRECT ----------
+Super Admin = OKAY
+Admin GeoMET = OKAY
+Admin BUMD & PI = OKAY
+Admin Dbh & Lifting = OKAY
+Admin Training = OKAY
+Admin News + Flash News = OKAY 
+
+--------- Admin GeoMET -----------
+Auth = OKAY
+Post = OKAY
+GET = OKAY
+DELETE = OKAY
+EDIT = OKAY
+
+--------- Admin BUMD & PI --------------
+Auth = OKAY
+Post = OKAY
+Get = OKAY
+Delete = OKAY
+Edit = OKAY
+
+--------- Admin DBH & LIFTING --------------
+Auth = OKAY
+Post = OKAY
+Get = OKAY
+Delete = OKAY
+Edit = OKAY
+
+--------- Admin TRAINING --------------
+Auth = OKAY
+Post = OKAY
+Get = OKAY
+Delete = OKAY
+Edit = OKAY
+
+--------- Admin Berita & Flash News --------------
+Auth = OKAY
+Post = OKAY
+Get = OKAY
+Delete = OKAY
+Edit = OKAY

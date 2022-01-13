@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
+
+/* * {
+  box-sizing: border-box;
+} */
+
+:root {
+    --custom1: #A6CD32;
+    --custom2: #067C7B;
+    --custom3: #3FC1C7;
+    --custom4: #fefefe;
+    --custom5: #fafafa;
+  }
+
+html, body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+html{
+    min-height: 100%;
+}
+
+body{
+    background: linear-gradient(#A6CD32, #E1E32A);
+    /* overflow-x: hidden; */
+}
+
+/* Background Colour Start */
+
+.slider {
+  width: 90%;
+  margin: 50px auto;
+}
+
+.slick-slide {
+margin: 0px 20px;
+}
+
+.slick-slide img {
+width: 100%;
+}
+
+.slick-prev:before,
+.slick-next:before {
+color: black;
+}
+
+
+.slick-slide {
+transition: all ease-in-out .3s;
+opacity: .2;
+}
+
+.slick-active {
+opacity: .9;
+}
+
+.slick-current {
+opacity: 1;
+}
+
+.bg-custom1 {
+    background-color: var(--custom1);
+}
+
+.bg-custom2 {
+    background-color: var(--custom2);
+}
+
+.bg-custom3 {
+    background-color: var(--custom3);
+}
+
+.bg-custom4 {
+    background-color: var(--custom4);
+}
+
+.bg-custom5 {
+  background-color: var(--custom5);
+}
+
+/* Background Colour End */
+
+/* Button Style Start */
+.btn-custom {
+  color: #f9f3f5;
+  background-color: var(--custom2);
+  border-color: var(--custom2);
+  box-shadow: 0 0 1px #ccc;
+  transition: 0.3s ease-out;
+  transform-origin: 0 0;
+  box-shadow:0px 0px 0 100px var(--custom2) inset;
+}
+.btn-custom:hover {
+  box-shadow:0px 0px 0 0px var(--custom2) inset;
+  transform: scale(1);
+  color: var(--custom2);
+  background-color: rgba(255, 255, 255, 0.3);
+  border-color: var(--custom2);
+}
+
+.btn-custom:focus, .btn-custom.focus {
+  color: #f9f3f5;
+  background-color: #23272b;
+  border-color: #1d2124;
+  box-shadow: 0 0 0 0.2rem rgba(82, 88, 93, 0.5);
+}
+.btn-custom.disabled, .btn-custom:disabled {
+  color: #f9f3f5;
+  background-color: #343a40;
+  border-color: #343a40;
+}
+.btn-custom:not(:disabled):not(.disabled):active, .btn-custom:not(:disabled):not(.disabled).active, .show > .btn-custom.dropdown-toggle {
+  color: #f9f3f5;
+  background-color: #1d2124;
+  border-color: #171a1d;
+}
+.btn-custom:not(:disabled):not(.disabled):active:focus, .btn-custom:not(:disabled):not(.disabled).active:focus, .show > .btn-custom.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(82, 88, 93, 0.5);
+}
+
+.btn-custom2 {
+  color: #f9f3f5;
+  background-color: var(--custom1);
+  border-color: var(--custom1);
+  box-shadow: 0 0 1px #ccc;
+  transition: 0.3s ease-out;
+  transform-origin: 0 0;
+  box-shadow:0px 0px 0 100px var(--custom1) inset;
+}
+
+.btn-custom2:hover {
+  box-shadow:0px 0px 0 0px #fff inset;
+  transform: scale(1);
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-color: #fff;
+}
+
+.btn-custom2:focus, .btn-custom2.focus {
+  color: #f9f3f5;
+  background-color: #23272b;
+  border-color: #1d2124;
+  box-shadow: 0 0 0 0.2rem rgba(82, 88, 93, 0.5);
+}
+.btn-custom2.disabled, .btn-custom2:disabled {
+  color: #f9f3f5;
+  background-color: #343a40;
+  border-color: #343a40;
+}
+.btn-custom2:not(:disabled):not(.disabled):active, .btn-custom2:not(:disabled):not(.disabled).active, .show > .btn-custom2.dropdown-toggle {
+  color: #f9f3f5;
+  background-color: #1d2124;
+  border-color: #171a1d;
+}
+.btn-custom2:not(:disabled):not(.disabled):active:focus, .btn-custom2:not(:disabled):not(.disabled).active:focus, .show > .btn-custom2.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(82, 88, 93, 0.5);
+}
+
+.btn-custom3 {
+  color: #f9f3f5;
+  background-color: var(--custom3);
+  border-color: var(--custom3);
+  box-shadow: 0 0 1px #ccc;
+  transition: 0.3s ease-out;
+  transform-origin: 0 0;
+  box-shadow:0px 0px 0 100px var(--custom3) inset;
+}
+
+.btn-custom3:hover {
+  box-shadow:0px 0px 0 0px var(--custom3) inset;
+  transform: scale(1);
+  color: var(--custom3);
+  background-color: rgba(255, 255, 255, 0.3);
+  border-color: var(--custom3);
+}
+
+.btn-custom3:focus, .btn-custom2.focus {
+  color: #f9f3f5;
+  background-color: var(--custom3);
+  border-color: var(--custom3);
+  box-shadow: 0 0 0 0.2rem rgba(82, 88, 93, 0.5);
+}
+.btn-custom3.disabled, .btn-custom2:disabled {
+  color: #f9f3f5;
+  background-color: #343a40;
+  border-color: #343a40;
+}
+.btn-custom3:not(:disabled):not(.disabled):active, .btn-custom2:not(:disabled):not(.disabled).active, .show > .btn-custom2.dropdown-toggle {
+  color: #f9f3f5;
+  background-color: var(--custom3);
+  border-color: var(--custom3);
+}
+.btn-custom3:not(:disabled):not(.disabled):active:focus, .btn-custom2:not(:disabled):not(.disabled).active:focus, .show > .btn-custom2.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(82, 88, 93, 0.5);
+}
+/* Button Style End */
+
+/* Login Card Start*/
+
+.left-logo{
+  width: 150%;
+}
+
+.left-logo img{
+  width: 100%;
+}
+
+label.myPassword{
+  font-size: 14px;
+}
+
+.other-option{
+  font-size: 14px;
+}
+
+.other-option a{
+  text-decoration: none;
+  font-weight: 300px;
+  font-size: 11px;
+  color: #adadad;
+}
+
+.other-option a{
+  text-decoration: none;
+  font-weight: 300px;
+  font-size: 11px;
+  color: #adadad;
+}
+
+.other-option a:hover{
+  color: var(--custom3);
+}
+
+.bottom-option {
+  font-size: 11px;
+}
+
+.bottom-option a {
+  text-decoration: none;
+}
+
+.informasi{
+  font-size: 12px;
+}
+
+/* Login Card End */
+

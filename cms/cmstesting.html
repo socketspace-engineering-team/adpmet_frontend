@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TESTING</title>
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="./assets/styles/styles.css" rel="stylesheet" />
+    <link href="./assets/styles/custom.css" rel="stylesheet" />
+    <!-- Font-Awesome Start -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" 
+    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" 
+    crossorigin="anonymous">
+</head>
+<body>
+    <form class="w-100" id="form-berita" method="post" enctype="multipart/form-data">
+        <div class="row p-3">
+            <div class="col-md-12">
+                <h2 class="sec-title text-center">Tambah Berita</h2>
+            </div>
+            <div class="col-md-6 mt-2">
+                <label class="text-muted" for="input-judul">Judul Berita</label>
+                <input type="text" placeholder="Judul Berita" class="form-control" id="input-judul" required>
+            </div>
+            <div class="col-md-6 mt-2">
+                <label class="text-muted" for="input-judul">Tanggal Berita</label>
+                <input type="date" class="form-control" id="input-tanggal" required>
+            </div>
+
+            <div class="col-md-12 mt-2">
+                <label class="text-muted" for="input-judul">Isi Berita</label>
+                <textarea name="editor" id="editor"></textarea>
+                <button id="editor-btn">TESTING</button>
+            </div>
+
+            <div class="col-md-6 mt-2">
+                <label class="text-muted">Thumbnail Berita</label>  
+                    <input id="input-gambar" type="file" class="form-control-file" aria-label="file example" onchange="readURLGambar(this);" required>
+                        <div class="invalid-feedback">Example invalid form file feedback</div>
+                <img id="thumb" src="https://via.placeholder.com/360/808080" class="img-fluid" alt="your image" />
+            </div>
+            <div class="col-md-6 mt-2">
+                <label class="text-muted" for="input-sumber-foto">Sumber Foto</label>
+                <input type="text" placeholder="Sumber Foto" class="form-control" id="input-sumber-foto" required>
+            </div>
+            <div class="col-md-6 mt-2" id="nama-admin">
+                
+            </div>
+            <div class="col-md-6 mt-2" id="id-admin">
+                
+            </div>
+            <div class="col-md-6 mt-2">
+                <label class="text-muted">Jenis Berita</label>
+                <select class="custom-select form-control" id="input-jenis">
+                    <option selected>Regular/Premium</option>
+                    <option value="0">Regular</option>
+                    <option value="1">Premium</option>
+                </select>
+            </div>              
+            <button id="upload" class="mt-5 btn btn-secondary btn-block" type="submit" value="Submit"><i class="far fa-plus-square"></i> Tambah Data</button>
+        </div>
+    </form>
+</body>
+</html>
